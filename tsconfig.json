@@ -1,0 +1,30 @@
+{
+    "extends": "./tsconfig.base.json",
+    "compilerOptions": {
+        "baseUrl": "src",
+        "target": "es2019",
+        "lib": ["es5", "es6", "es7", "es2019", "dom", "ES2020.Promise", "ES2020.Intl", "ES2021.String"],
+        "useDefineForClassFields": true,
+        "allowJs": false,
+        "skipLibCheck": true,
+        "esModuleInterop": false,
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "module": "ESNext",
+        "moduleResolution": "Node",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": true,
+        "strictPropertyInitialization": false,
+        "noImplicitOverride": true,
+        "paths": {
+            "@": ["."],
+            "@/*": ["./*"],
+            "@mui/styled-engine": ["./node_modules/@mui/styled-engine-sc"]
+        },
+        "jsx": "react-jsx"
+    },
+    "include": ["src/**/*"],
+    "references": [{ "path": "./tsconfig.node.json" }]
+}

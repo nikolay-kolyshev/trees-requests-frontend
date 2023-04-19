@@ -1,0 +1,23 @@
+{
+    "$schema": "https://json.schemastore.org/swcrc",
+    "jsc": {
+        "target": "es2019",
+        "experimental": {
+            "plugins": [
+                [
+                    "@swc/plugin-styled-components",
+                    {
+                        "displayName": true,
+                        "ssr": false,
+                        "fileName": true,
+                        "namespace": "web-application"
+                    }
+                ]
+            ]
+        },
+        "transform": {
+            "decoratorMetadata": true,
+            "legacyDecorator": true
+        }
+    }
+}
