@@ -18,7 +18,7 @@ const getCommonServerOptions = (port: number): CommonServerOptions => {
         port,
         host: true,
         open: true,
-        https: true,
+        https: false,
     };
 };
 
