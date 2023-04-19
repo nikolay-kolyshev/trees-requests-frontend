@@ -23,7 +23,7 @@ export const TreesRequestsCreateItem: React.FC<ITreesRequestsCreate> = memo(
         const isMobile = useMobileNavigation();
 
         const imageUrl = useMemo(() => {
-            return `http://localhost:5555/images/${imageId}`;
+            return `http://localhost:7777/images/${imageId}`;
         }, [imageId]);
 
         return (

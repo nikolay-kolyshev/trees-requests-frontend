@@ -8,7 +8,7 @@ import {
 } from './http-client.types';
 
 export abstract class HttpClientBase<HttpClientStrategy extends EHttpClientStrategy> {
-    private readonly baseUrl = 'http://localhost:5555';
+    private readonly baseUrl = 'http://localhost:7777';
 
     protected apiInstance: AxiosInstance = axios;
 
