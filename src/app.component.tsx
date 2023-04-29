@@ -1,3 +1,4 @@
+// @ts-ignore
 import React, { useMemo } from 'react';
 import { createTheme, ThemeProvider } from '@mui/material';
 import { GlobalStyles } from '@mui/styled-engine-sc';

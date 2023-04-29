@@ -1,3 +1,4 @@
+// @ts-ignore
 import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import { routingPages } from '@/UI/routing/routing.constants';
