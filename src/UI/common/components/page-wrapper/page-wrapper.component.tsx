@@ -15,6 +15,9 @@ import Button from '@mui/material/Button';
 import { routingPages } from '@/UI/routing/routing.constants';
 import { useNavigate } from 'react-router-dom';
 import { Portal } from '@mui/material';
+import { ThemeSwitcher } from '@/UI/common/components/page-wrapper/page-wrapper.styles';
+import { $theme, updateThemeEvent } from '@/BLL/models/theme/theme.store';
+import { useUnit } from 'effector-react';
 
 const drawerWidth = 240;
 const navItems = Object.entries(routingPages);
@@ -22,6 +25,11 @@ const navItems = Object.entries(routingPages);
 export const PageWrapper: FC<PropsWithChildren> = memo(({ children }) => {
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const navigate = useNavigate();
+    const [theme, updateTheme] = useUnit([$theme, updateThemeEvent]);
+
+    const switchTheme = useCallback(() => {
+        updateTheme(theme === 'dark' ? 'light' : 'dark');
+    }, [updateTheme, theme]);
 
     const handleDrawerToggle = useCallback(() => {
         setMobileOpen((prevState) => !prevState);
@@ -80,6 +88,7 @@ export const PageWrapper: FC<PropsWithChildren> = memo(({ children }) => {
                                 Лечение деревьев
                             </div>
                         </Typography>
+                        <ThemeSwitcher onChange={switchTheme} checked={theme === 'light'} />
                         <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                             {navItems.map(([key, { path, name }]) => (
                                 <Button key={key} sx={{ color: '#fff' }} onClick={() => handleNavigatePage(path)}>

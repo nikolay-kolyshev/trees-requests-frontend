@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import React, { useMemo } from 'react';
 import { createTheme, ThemeProvider } from '@mui/material';
