@@ -82,13 +82,5 @@
     },
     "bugs": {
         "url": "https://github.com/nikolay-kolyshev/trees-requests-frontend/issues"
-    },
-    "packageManager": "pnpm@8.1.1",
-    "engineStrict": true,
-    "engines": {
-        "node": ">= 18.11.0",
-        "npm": "use-pnpm-instead-of-npm",
-        "yarn": "use-pnpm-instead-of-yarn",
-        "pnpm": ">= 8.1.1"
     }
 }
