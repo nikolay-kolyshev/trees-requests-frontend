@@ -8,7 +8,7 @@ import {
 } from './http-client.types';
 
 export abstract class HttpClientBase<HttpClientStrategy extends EHttpClientStrategy> {
-    private readonly baseUrl = 'http://localhost:7777';
+    private readonly baseUrl = 'https://trees-requests-backend.vercel.app/';
 
     protected apiInstance: AxiosInstance = axios;
 
